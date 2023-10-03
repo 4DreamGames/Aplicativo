@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AplicativoPesadeloOculto</string>
+    <string name="inicio">Home</string>
+    <string name="desenvolvedores">Devs</string>
+    <string name="historia">Historia</string>
+    <string name="instrucoesGame">Instruções</string>
+    <string name="sobre">Sobre</string>
 </resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inicioItem"
+        android:icon="@drawable/casa"
+        android:title="@string/inicio" />
+
+    <item
+        android:id="@+id/devsItem"
+        android:icon="@drawable/devs"
+        android:title="@string/desenvolvedores" />
+
+    <item
+        android:id="@+id/tremItem"
+        android:icon="@drawable/trem"
+        android:title="@string/historia" />
+
+    <item
+        android:id="@+id/instrucoesItem"
+        android:icon="@drawable/cientista"
+        android:title="@string/instrucoesGame" />
+
+    <item
+        android:id="@+id/sobreItem"
+        android:icon="@drawable/informacoes"
+        android:title="@string/sobre" />
+
+</menu>
