@@ -19,7 +19,7 @@
         app:menu="@menu/menu_navigation" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/inicio"
