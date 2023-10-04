@@ -13,6 +13,24 @@
         android:theme="@style/Theme.AplicativoPesadeloOculto"
         tools:targetApi="31">
         <activity
+            android:name=".sobre"
+            android:exported="false" />
+        <activity
+            android:name=".instrucoes"
+            android:exported="false" />
+        <activity
+            android:name=".historia"
+            android:exported="false" />
+        <activity
+            android:name=".devs"
+            android:exported="false" />
+        <activity
+            android:name=".menu"
+            android:exported="false" />
+        <activity
+            android:name=".men8"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
