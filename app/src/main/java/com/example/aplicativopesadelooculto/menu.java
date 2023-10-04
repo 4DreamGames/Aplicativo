@@ -30,7 +30,6 @@ public class menu extends AppCompatActivity {
             if (item.getItemId() == R.id.inicioItem) {
 
             } else if (item.getItemId() == R.id.devsItem) {
-
                 Intent intent = new Intent(this, devs.class);
                 startActivity(intent);
             } else if (item.getItemId() == R.id.tremItem) {
@@ -42,7 +41,6 @@ public class menu extends AppCompatActivity {
                 Intent intent = new Intent(this, instrucoes.class);
                 startActivity(intent);
             } else if (item.getItemId() == R.id.sobreItem) {
-
                 Intent intent = new Intent(this, sobre.class);
                 startActivity(intent);
             }

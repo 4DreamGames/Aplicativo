@@ -20,7 +20,8 @@ public class sobre extends AppCompatActivity {
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.inicioItem) {
-
+                Intent intent = new Intent(this, menu.class);
+                startActivity(intent);
             } else if (item.getItemId() == R.id.devsItem) {
 
                 Intent intent = new Intent(this, devs.class);
