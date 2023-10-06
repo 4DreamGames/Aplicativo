@@ -46,11 +46,6 @@ public class menu extends AppCompatActivity {
             }
             return true;
         });
-        BadgeDrawable badge = bottomNavigationView.getOrCreateBadge(R.id.inicioItem);
-        badge.setNumber(7);
-        badge.setVisible(true);
-
-
     }
 
 
