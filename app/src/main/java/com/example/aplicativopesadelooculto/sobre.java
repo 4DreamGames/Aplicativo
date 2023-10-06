@@ -18,24 +18,24 @@ public class sobre extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
-        bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.inicioItem) {
-                Intent intent = new Intent(this, menu.class);
-                startActivity(intent);
-            } else if (item.getItemId() == R.id.devsItem) {
-                Intent intent = new Intent(this, devs.class);
-                startActivity(intent);
-            } else if (item.getItemId() == R.id.tremItem) {
-                Intent intent = new Intent(this, historia.class);
-                startActivity(intent);
-            } else if (item.getItemId() == R.id.instrucoesItem) {
-                Intent intent = new Intent(this, instrucoes.class);
-                startActivity(intent);
-            } else if (item.getItemId() == R.id.sobreItem) {
-                Intent intent = new Intent(this, sobre.class);
-                startActivity(intent);
-            }
-            return true;
-        });
+//        bottomNavigationView.setOnItemSelectedListener(item -> {
+//            if (item.getItemId() == R.id.inicioItem) {
+//                Intent intent = new Intent(this, menu.class);
+//                startActivity(intent);
+//            } else if (item.getItemId() == R.id.devsItem) {
+//                Intent intent = new Intent(this, devs.class);
+//                startActivity(intent);
+//            } else if (item.getItemId() == R.id.tremItem) {
+//                Intent intent = new Intent(this, historia.class);
+//                startActivity(intent);
+//            } else if (item.getItemId() == R.id.instrucoesItem) {
+//                Intent intent = new Intent(this, instrucoes.class);
+//                startActivity(intent);
+//            } else if (item.getItemId() == R.id.sobreItem) {
+//                Intent intent = new Intent(this, sobre.class);
+//                startActivity(intent);
+//            }
+//            return true;
+//        });
     }
 }
