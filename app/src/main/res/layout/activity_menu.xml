@@ -12,22 +12,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:layout_marginTop="15dp"
         android:background="@color/Navbar"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewMenu"
         app:menu="@menu/menu_navigation" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+        android:id="@+id/scrollViewMenu"
+        android:layout_width="410dp"
+        android:layout_height="644dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-7dp">
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,26 +41,269 @@
 
             <TextView
                 android:id="@+id/textNome"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:paddingTop="50dp"
                 android:fontFamily="@font/im_fell_great_primer_sc"
-                android:text="@string/Home"
+                android:text="@string/saudacao"
                 android:textColor="@color/white"
-                android:textSize="34sp" />
+                android:textSize="26dp" />
 
             <TextView
-                android:id="@+id/infoTextView"
+                android:id="@+id/infoTextViewHome2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="377dp"
+                android:layout_margin="15dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/im_fell_great_primer_sc"
                 android:text="@string/Home"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="16dp"
+                app:autoSizeTextType="uniform" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="246dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/image" />
+
+            <TextView
+                android:id="@+id/infoTextViewHome1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/im_fell_great_primer_sc"
+                android:paddingBottom="15dp"
+                android:text="@string/Home"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:autoSizeTextType="uniform" />
 
 
         </LinearLayout>
     </ScrollView>
 
+    <ScrollView
+        android:id="@+id/scrollViewDevs"
+        android:layout_width="410dp"
+        android:layout_height="644dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/infoTextViewDevs2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/im_fell_great_primer_sc"
+                android:text="@string/devTitulo"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:autoSizeTextType="uniform" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="246dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/image" />
+
+            <TextView
+                android:id="@+id/infoTextViewDevs1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/im_fell_great_primer_sc"
+                android:paddingBottom="15dp"
+                android:text="@string/Home"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:autoSizeTextType="uniform" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollViewHistoria"
+        android:layout_width="410dp"
+        android:layout_height="644dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/infoTextViewHistoriaTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/im_fell_great_primer_sc"
+                android:text="@string/historia"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:autoSizeTextType="uniform" />
+
+            <ImageView
+                android:id="@+id/imageViewHistoria"
+                android:layout_width="wrap_content"
+                android:layout_height="246dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/image" />
+
+            <TextView
+                android:id="@+id/infoTextViewHistoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/im_fell_great_primer_sc"
+                android:paddingBottom="15dp"
+                android:text="@string/Home"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:autoSizeTextType="uniform" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollViewInstrucoes"
+        android:layout_width="410dp"
+        android:layout_height="644dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/infoTextViewInstru2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/im_fell_great_primer_sc"
+                android:text="@string/devTitulo"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:autoSizeTextType="uniform" />
+
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="wrap_content"
+                android:layout_height="246dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/image" />
+
+            <TextView
+                android:id="@+id/infoTextViewInstru3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/im_fell_great_primer_sc"
+                android:paddingBottom="15dp"
+                android:text="@string/Home"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:autoSizeTextType="uniform" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollViewSobre"
+        android:layout_width="410dp"
+        android:layout_height="644dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/infoTextViewSobre2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/im_fell_great_primer_sc"
+                android:text="@string/devTitulo"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:autoSizeTextType="uniform" />
+
+            <ImageView
+                android:id="@+id/imageView2222"
+                android:layout_width="wrap_content"
+                android:layout_height="246dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/image" />
+
+            <TextView
+                android:id="@+id/infoTextViewSobre1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/im_fell_great_primer_sc"
+                android:paddingBottom="15dp"
+                android:text="@string/Home"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:autoSizeTextType="uniform" />
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

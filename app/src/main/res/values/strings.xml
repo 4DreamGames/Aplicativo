@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">AplicativoPesadeloOculto</string>
     <string name="Home">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making i</string>
-    <string name="desenvolvedores">Devs</string>
+    <string name="titulo">Home</string>
+    <string name="saudacao">...</string>
+    <string name="devTitulo">Desenvolvedores</string>
+    <string name="desenvolvedores2">Devs</string>
     <string name="historia">Historia</string>
     <string name="instrucoesGame">Instruções</string>
     <string name="sobre">Sobre</string>
