@@ -12,8 +12,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class menu extends AppCompatActivity {
 
-    private ScrollView scrollViewMenu,scrollViewDevs, scrollViewHistoria, scrollViewInstrucoes, scrollViewSobre;
-    private TextView infoTextViewDevs, infoTextViewDevs2, devTitulo, infoTextView, textSaudacao, infoTextHome1, infoTextHome2;
+    private ScrollView scrollViewHistoria, scrollViewInstrucoes, scrollViewSobre;
+    private TextView infoTextViewDevs, infoTextViewDevs2, infoTextHistoria1, infoTextHistoria2, infoTextInstrucoes1 ,infoTextInstrucoes2, infoTextHome1, infoTextHome2, infoTextSobre1, infoTextSobre2;
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -38,6 +38,15 @@ public class menu extends AppCompatActivity {
         // Initialize infoTextView and BottomNavigationView
         infoTextHome1 = findViewById(R.id.infoTextViewHome1);
         infoTextHome2 = findViewById(R.id.infoTextViewHome2);
+
+        infoTextSobre1 = findViewById(R.id.infoTextViewSobre1);
+        infoTextSobre2 = findViewById(R.id.infoTextViewSobre2);
+
+        infoTextInstrucoes1 = findViewById(R.id.infoTextViewInstru2);
+        infoTextInstrucoes2 = findViewById(R.id.infoTextViewInstru3);
+
+        infoTextHistoria1 = findViewById(R.id.infoTextViewHistoriaTitulo);
+        infoTextHistoria2 = findViewById(R.id.infoTextViewHistoria);
 
         infoTextViewDevs = findViewById(R.id.infoTextViewDevs1);
         infoTextViewDevs2 = findViewById(R.id.infoTextViewDevs2);
@@ -70,8 +79,8 @@ public class menu extends AppCompatActivity {
                 scrollViewInstrucoes.setVisibility(View.INVISIBLE);
                 scrollViewHistoria.setVisibility(View.INVISIBLE);
                 scrollViewSobre.setVisibility(View.INVISIBLE);
-                infoTextViewDevs2.setText(R.string.devTitulo);
-                infoTextViewDevs.setText(R.string.Home);
+                infoTextViewDevs2.setText(R.string.historia);
+                infoTextViewDevs.setText(R.string.Historia);
                 scrollViewDevs.setVisibility(View.VISIBLE);
 
             } else if (item.getItemId() == R.id.tremItem) {
@@ -79,8 +88,8 @@ public class menu extends AppCompatActivity {
                 scrollViewDevs.setVisibility(View.INVISIBLE);
                 scrollViewInstrucoes.setVisibility(View.INVISIBLE);
                 scrollViewHistoria.setVisibility(View.INVISIBLE);
-                infoTextViewDevs2.setText(R.string.devTitulo);
-                infoTextViewDevs.setText(R.string.Home);
+                infoTextHistoria1.setText(R.string.historia);
+                infoTextHistoria2.setText(R.string.Historia);
                 scrollViewHistoria.setVisibility(View.VISIBLE);
 
             } else if (item.getItemId() == R.id.instrucoesItem) {
@@ -88,8 +97,8 @@ public class menu extends AppCompatActivity {
                 scrollViewDevs.setVisibility(View.INVISIBLE);
                 scrollViewHistoria.setVisibility(View.INVISIBLE);
                 scrollViewSobre.setVisibility(View.INVISIBLE);
-                infoTextViewDevs2.setText(R.string.devTitulo);
-                infoTextViewDevs.setText(R.string.Home);
+                infoTextInstrucoes1.setText(R.string.instrucoesGame);
+                infoTextInstrucoes2.setText(R.string.Instrucoes);
                 scrollViewInstrucoes.setVisibility(View.VISIBLE);
 
             } else if (item.getItemId() == R.id.sobreItem) {
@@ -97,8 +106,8 @@ public class menu extends AppCompatActivity {
                 scrollViewDevs.setVisibility(View.INVISIBLE);
                 scrollViewHistoria.setVisibility(View.INVISIBLE);
                 scrollViewInstrucoes.setVisibility(View.INVISIBLE);
-                infoTextViewDevs2.setText(R.string.devTitulo);
-                infoTextViewDevs.setText(R.string.Home);
+                infoTextSobre1.setText(R.string.sobre);
+                infoTextSobre2.setText(R.string.conteudosobre);
                 scrollViewSobre.setVisibility(View.VISIBLE);
             }
             return true;
