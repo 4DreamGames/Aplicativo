@@ -88,6 +88,7 @@ public class menu extends AppCompatActivity {
                 scrollViewDevs.setVisibility(View.INVISIBLE);
                 scrollViewInstrucoes.setVisibility(View.INVISIBLE);
                 scrollViewHistoria.setVisibility(View.INVISIBLE);
+                scrollViewSobre.setVisibility(View.INVISIBLE);
                 infoTextHistoria1.setText(R.string.historia);
                 infoTextHistoria2.setText(R.string.Historia);
                 scrollViewHistoria.setVisibility(View.VISIBLE);
