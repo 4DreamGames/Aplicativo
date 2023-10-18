@@ -9,7 +9,7 @@
     <item
         android:id="@+id/devsItem"
         android:icon="@drawable/devs"
-        android:title="@string/devTitulo" />
+        android:title="@string/desenvolvedores2" />
 
     <item
         android:id="@+id/tremItem"

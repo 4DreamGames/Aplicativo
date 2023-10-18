@@ -79,8 +79,8 @@ public class menu extends AppCompatActivity {
                 scrollViewInstrucoes.setVisibility(View.INVISIBLE);
                 scrollViewHistoria.setVisibility(View.INVISIBLE);
                 scrollViewSobre.setVisibility(View.INVISIBLE);
-                infoTextViewDevs2.setText(R.string.historia);
-                infoTextViewDevs.setText(R.string.Historia);
+                infoTextViewDevs2.setText(R.string.devTitulo);
+                infoTextViewDevs.setText(R.string.desenvolvedores2);
                 scrollViewDevs.setVisibility(View.VISIBLE);
 
             } else if (item.getItemId() == R.id.tremItem) {
