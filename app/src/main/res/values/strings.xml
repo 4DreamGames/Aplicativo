@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">AplicativoPesadeloOculto</string>
-    <string name="Home">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making i</string>
     <string name="titulo">Home</string>
     <string name="saudacao">...</string>
     <string name="devTitulo">Desenvolvedores</string>
@@ -8,18 +7,45 @@
     <string name="historia">Historia</string>
     <string name="instrucoesGame">Instruções</string>
     <string name="sobre">Sobre</string>
-    <string name="Historia">No ano de 2050 um laboratório científico estava tentando descobrir a cura para o câncer com células modificadas na cidade de Nova York. Infelizmente devido as pesquisas ilegais e experimentos feito pelos cientistas as células afetaram o sistema nervoso do cérebro humano mudando seu raciocínio e seu corpo, sofrendo mutações e mudando sua aparência. A primeira cobaia infectou seu cientista e isso acabou se espalhando para o mundo.
-A capital da Noruega Oslo, é uma das únicas que ainda não está infectada. O eletricista James e o cientista Mario, conseguiram chegar até uma estação da Finlândia para pegar um trem que os levaria até a cidade. Porém não é só eles que querem chegar lá. O trem está carregado de infectados.
-</string>
+
+    <string name="Home">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+        making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+        making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+        making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+        making iContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+        making i
+    </string>
+
+    <string name="HomeIntroducao">Esse é o nosso aplicativo, ele permitira que você jogador, possa entender um pouco da dinamica e contrução do nosso jogo.
+        Segue abaixo os videos e uma pequena introdução sobre eles, para que possa entender o nosso incrivel jogo.
+    </string>
+
+    <string name="Historia">No ano de 2050 um laboratório científico estava tentando descobrir a cura para o câncer com células modificadas na cidade de
+        Nova York. Infelizmente devido as pesquisas ilegais e experimentos feito pelos cientistas as células afetaram o sistema nervoso do
+        cérebro humano mudando seu raciocínio e seu corpo, sofrendo mutações e mudando sua aparência. A primeira cobaia infectou seu cientista e
+        isso acabou se espalhando para o mundo.
+        A capital da Noruega Oslo, é uma das únicas que ainda não está infectada. O eletricista James e o cientista Mario, conseguiram chegar até uma estação
+        da Finlândia para pegar um trem que os levaria até a cidade. Porém não é só eles que querem chegar lá. O trem está carregado de infectados.
+    </string>
+
     <string name="Instrucoes">O jogador estará na visão do eletricista e iniciara dentro de um vagão de um trem e terá como objetivo chegar até a cabine de controle para guiar o trem até uma estação. Ele terá certos obstáculos que vão ser “Nome dos obstáculos” e para passar ele não poderá ser visto, caso seja visto, ele terá que enfrentar os monstros. Para ajudar o jogador itens vão aparecer em meio a sua jogatina para o ajudá-lo.
-O eletricista carrega uma mochila com uma bateria e um fio ligado à sua mão, que ele usa como arma para eletrocutar os infectados.
-O trem está cheio de infectados, e o protagonista deve evitá-los ou enfrentá-los.
-</string>
+        O eletricista carrega uma mochila com uma bateria e um fio ligado à sua mão, que ele usa como arma para eletrocutar os infectados.
+        O trem está cheio de infectados, e o protagonista deve evitá-los ou enfrentá-los.
+    </string>
+
     <string name="conteudosobre">Classificação indicativa não recomendada para menores de 12 anos, de acordo com os seguintes critérios:
-A.3.3. Ato Violento
-- Representações de ameaça ou ação intencional de violência, que atente contra a integridade corporal, liberdade ou à saúde, própria ou de outrem. Incluem-se nesta tendência as retratações de tráfico de pessoas.
-A.3.7. Exposição ao perigo
-	- Representação de ato volitivo ou omissivo que coloque em risco a vida ou a saúde de si mesmo ou de outrem. O ato depende da consciência sobre a omissão ou o risco da ação realizada. O perigo deve ser palpável e previsível.
-</string>
-    <string name="historia1">ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</string>
+        A.3.3. Ato Violento
+        - Representações de ameaça ou ação intencional de violência, que atente contra a integridade corporal, liberdade ou à saúde, própria ou de outrem. Incluem-se nesta tendência as retratações de tráfico de pessoas.
+        A.3.7. Exposição ao perigo
+	    - Representação de ato volitivo ou omissivo que coloque em risco a vida ou a saúde de si mesmo ou de outrem. O ato depende da consciência sobre a omissão ou o risco da ação realizada. O perigo deve ser palpável e previsível.
+    </string>
+
+    <string name="historia1">ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+        making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+        consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+        Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+        This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+        comes from a line in section 1.10.32.
+    </string>
+
 </resources>

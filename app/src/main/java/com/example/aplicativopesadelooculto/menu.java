@@ -2,8 +2,11 @@ package com.example.aplicativopesadelooculto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -12,8 +15,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class menu extends AppCompatActivity {
 
+    private ImageButton ImageButtonVideo1, ImageButtonVideo2;
     private ScrollView scrollViewHistoria, scrollViewInstrucoes, scrollViewSobre;
-    private TextView infoTextViewDevs, infoTextViewDevs2, infoTextHistoria1, infoTextHistoria2, infoTextInstrucoes1 ,infoTextInstrucoes2, infoTextHome1, infoTextHome2, infoTextSobre1, infoTextSobre2;
+    private TextView infoTextViewHomeIntroducao, infoTextViewDevs, infoTextViewDevs2, infoTextHistoria1, infoTextHistoria2, infoTextInstrucoes1 ,infoTextInstrucoes2, infoTextHome1, infoTextHome2, infoTextSobre1, infoTextSobre2;
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -23,6 +27,8 @@ public class menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         ScrollView scrollViewMenu = findViewById(R.id.scrollViewMenu);
         ScrollView scrollViewDevs = findViewById(R.id.scrollViewDevs);
+        ImageButtonVideo1 = findViewById(R.id.imageVideo1);
+        ImageButtonVideo2 = findViewById(R.id.imageVideo2);
 
         // Retrieve the message from the intent and display it
         Bundle extras = getIntent().getExtras();
@@ -33,11 +39,25 @@ public class menu extends AppCompatActivity {
             String txt = String.format("Olá <%s>", msg);
             saudacao.setText(txt);
         }
-       // scrollViewDevs.setVisibility(View.GONE);
-
+        ImageButtonVideo1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ImageButtonVideo1 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/"));
+                startActivity(ImageButtonVideo1);
+            }
+        });
+        ImageButtonVideo2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ImageButtonVideo2 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/"));
+                startActivity(ImageButtonVideo2);
+            }
+        });
+        // scrollViewDevs.setVisibility(View.GONE);
         // Initialize infoTextView and BottomNavigationView
         infoTextHome1 = findViewById(R.id.infoTextViewHome1);
         infoTextHome2 = findViewById(R.id.infoTextViewHome2);
+        infoTextViewHomeIntroducao = findViewById(R.id.infoTextViewHomeIntroducao);
 
         infoTextSobre1 = findViewById(R.id.infoTextViewSobre1);
         infoTextSobre2 = findViewById(R.id.infoTextViewSobre2);
@@ -70,6 +90,7 @@ public class menu extends AppCompatActivity {
                 scrollViewSobre.setVisibility(View.INVISIBLE);
                 scrollViewInstrucoes.setVisibility(View.INVISIBLE);
                 scrollViewHistoria.setVisibility(View.INVISIBLE);
+                infoTextViewHomeIntroducao.setText(R.string.HomeIntroducao);
                 infoTextHome1.setText(R.string.Home);
                 infoTextHome2.setText(R.string.Home);
                 scrollViewMenu.setVisibility(View.VISIBLE);
