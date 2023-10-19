@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -19,6 +21,7 @@ public class menu extends AppCompatActivity {
     private ScrollView scrollViewHistoria, scrollViewInstrucoes, scrollViewSobre;
     private TextView infoTextViewHomeIntroducao, infoTextViewDevs, infoTextViewDevs2, infoTextHistoria1, infoTextHistoria2, infoTextInstrucoes1 ,infoTextInstrucoes2, infoTextHome1, infoTextHome2, infoTextSobre1, infoTextSobre2;
     private BottomNavigationView bottomNavigationView;
+    ListView listViewDevs;
 
     @Override
 
@@ -68,7 +71,6 @@ public class menu extends AppCompatActivity {
         infoTextHistoria1 = findViewById(R.id.infoTextViewHistoriaTitulo);
         infoTextHistoria2 = findViewById(R.id.infoTextViewHistoria);
 
-        infoTextViewDevs = findViewById(R.id.infoTextViewDevs1);
         infoTextViewDevs2 = findViewById(R.id.infoTextViewDevs2);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -134,5 +136,15 @@ public class menu extends AppCompatActivity {
             }
             return true;
         });
+
+        listViewDevs = findViewById(R.id.listViewDevs);
+        listViewDevs.setAdapter(adapter);
+
+        String[] itensDevs = new String[]{"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this, // Contexto
+                android.R.layout.simple_list_item_1, // ID do layout do item da lista (layout padrão fornecido pelo Android)
+                itensDevs // Dados
+        );
     }
 }
