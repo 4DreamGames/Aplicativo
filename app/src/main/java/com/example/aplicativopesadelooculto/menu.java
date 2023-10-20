@@ -137,14 +137,14 @@ public class menu extends AppCompatActivity {
             return true;
         });
 
-        listViewDevs = findViewById(R.id.listViewDevs);
-        listViewDevs.setAdapter(adapter);
-
-        String[] itensDevs = new String[]{"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this, // Contexto
-                android.R.layout.simple_list_item_1, // ID do layout do item da lista (layout padrão fornecido pelo Android)
-                itensDevs // Dados
-        );
+//        listViewDevs = findViewById(R.id.listViewDevs);
+//        listViewDevs.setAdapter(adapter);
+//
+//        String[] itensDevs = new String[]{"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+//                this, // Contexto
+//                android.R.layout.simple_list_item_1, // ID do layout do item da lista (layout padrão fornecido pelo Android)
+//                itensDevs // Dados
+//        );
     }
 }
