@@ -14,7 +14,7 @@
     <item
         android:id="@+id/tremItem"
         android:icon="@drawable/trem"
-        android:title="@string/historia" />
+        android:title="@string/HistoriaTitulo" />
 
     <item
         android:id="@+id/instrucoesItem"
