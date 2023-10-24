@@ -22,6 +22,7 @@ public class menu extends AppCompatActivity {
     private TextView infoTextTitulo, infoText1, infoText2, infoText3 ;
     private BottomNavigationView bottomNavigationView;
     ListView listViewDevs;
+    String txt;
 
     @Override
 
@@ -38,7 +39,7 @@ public class menu extends AppCompatActivity {
         TextView saudacao = findViewById(R.id.infoTextViewTitulo);
         if (extras != null && extras.containsKey(MainActivity.EXTRA_MESSAGE)) {
             msg = extras.getString(MainActivity.EXTRA_MESSAGE);
-            String txt = String.format("Olá <%s>", msg);
+            txt = String.format("Olá <%s>", msg);
             saudacao.setText(txt);
         }
         ImageButtonVideo1.setOnClickListener(new View.OnClickListener() {
@@ -66,33 +67,43 @@ public class menu extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.inicioItem) {
                 //invisible apaga o conteudo da tela dele perante a tela que vc pedir para exibir
-                infoTextTitulo.setText(R.string.HomeIntroducao);
-                infoText1.setText(R.string.Home);
+                infoTextTitulo.setText(txt);
+                infoText1.setText(R.string.HomeIntroducao);
                 infoText2.setText(R.string.Home);
+                infoText1.setVisibility(View.VISIBLE);
+                infoText2.setVisibility(View.VISIBLE);
+                //infoText3.setVisibility(View.VISIBLE);
+                ImageButtonVideo1.setVisibility(View.VISIBLE);
+                ImageButtonVideo2.setVisibility(View.VISIBLE);
+
 
             } else if (item.getItemId() == R.id.devsItem) {
                 infoTextTitulo.setText(R.string.devTitulo);
                 infoText1.setText(R.string.desenvolvedores2);
-                infoText2.setVisibility(View.INVISIBLE);
-                infoText3.setVisibility(View.INVISIBLE);
-                ImageButtonVideo1.setVisibility(View.INVISIBLE);
+                infoText2.setVisibility(View.GONE);
+                infoText3.setVisibility(View.GONE);
+                ImageButtonVideo1.setVisibility(View.GONE);
+                ImageButtonVideo2.setVisibility(View.GONE);
 
             } else if (item.getItemId() == R.id.tremItem) {
                 infoTextTitulo.setText(R.string.HistoriaTitulo);
                 infoText2.setText(R.string.Historia);
-                ImageButtonVideo2.setVisibility(View.INVISIBLE);
-                infoText1.setVisibility(View.INVISIBLE);
-                infoText3.setVisibility(View.INVISIBLE);
-
+                ImageButtonVideo2.setVisibility(View.GONE);
+                infoText1.setVisibility(View.GONE);
+                infoText3.setVisibility(View.GONE);
             } else if (item.getItemId() == R.id.instrucoesItem) {
                 infoTextTitulo.setText(R.string.instrucoesGame);
                 infoText1.setText(R.string.Instrucoes);
+                ImageButtonVideo1.setVisibility(View.GONE);
+                ImageButtonVideo2.setVisibility(View.GONE);
 
             } else if (item.getItemId() == R.id.sobreItem) {
                 infoTextTitulo.setText(R.string.sobre);
                 infoText1.setText(R.string.conteudosobre);
-                infoText2.setVisibility(View.INVISIBLE);
-                infoText3.setVisibility(View.INVISIBLE);
+                infoText2.setVisibility(View.GONE);
+                infoText3.setVisibility(View.GONE);
+                ImageButtonVideo2.setVisibility(View.GONE);
+                ImageButtonVideo1.setVisibility(View.GONE);
             }
             return true;
         });

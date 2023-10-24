@@ -59,6 +59,7 @@
                 android:layout_margin="10dp"
                 android:fontFamily="@font/im_fell_french_canon_sc"
                 android:justificationMode="inter_word"
+                android:minHeight="0dp"
                 android:text="@string/HomeIntroducao"
                 android:textColor="@color/white"
                 android:textSize="24sp"
