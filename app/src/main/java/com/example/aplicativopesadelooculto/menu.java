@@ -72,7 +72,6 @@ public class menu extends AppCompatActivity {
                 infoText2.setText(R.string.Home);
                 infoText1.setVisibility(View.VISIBLE);
                 infoText2.setVisibility(View.VISIBLE);
-                //infoText3.setVisibility(View.VISIBLE);
                 ImageButtonVideo1.setVisibility(View.VISIBLE);
                 ImageButtonVideo2.setVisibility(View.VISIBLE);
 
@@ -91,12 +90,16 @@ public class menu extends AppCompatActivity {
                 ImageButtonVideo2.setVisibility(View.GONE);
                 infoText1.setVisibility(View.GONE);
                 infoText3.setVisibility(View.GONE);
+                infoText2.setVisibility(View.VISIBLE);
+                ImageButtonVideo1.setVisibility(View.VISIBLE);
             } else if (item.getItemId() == R.id.instrucoesItem) {
                 infoTextTitulo.setText(R.string.instrucoesGame);
                 infoText1.setText(R.string.Instrucoes);
+                infoText2.setVisibility(View.GONE);
+                infoText3.setVisibility(View.GONE);
                 ImageButtonVideo1.setVisibility(View.GONE);
                 ImageButtonVideo2.setVisibility(View.GONE);
-
+                infoText1.setVisibility(View.VISIBLE);
             } else if (item.getItemId() == R.id.sobreItem) {
                 infoTextTitulo.setText(R.string.sobre);
                 infoText1.setText(R.string.conteudosobre);
@@ -104,6 +107,7 @@ public class menu extends AppCompatActivity {
                 infoText3.setVisibility(View.GONE);
                 ImageButtonVideo2.setVisibility(View.GONE);
                 ImageButtonVideo1.setVisibility(View.GONE);
+                infoText1.setVisibility(View.VISIBLE);
             }
             return true;
         });
