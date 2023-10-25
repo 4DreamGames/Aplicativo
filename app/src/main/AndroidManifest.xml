@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicativoPesadeloOculto"
         tools:targetApi="31">
+        <activity
+            android:name=".ActivityCustomListView"
+            android:exported="false" />
+        <activity
+            android:name=".activity_custom_list_view"
+            android:exported="false" />
         <activity
             android:name=".sobre"
             android:exported="false" />

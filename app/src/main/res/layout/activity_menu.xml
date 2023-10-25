@@ -35,7 +35,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
@@ -51,6 +51,14 @@
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
+
+            <ListView
+                android:id="@+id/customListView"
+                android:layout_width="match_parent"
+                android:layout_height="511dp"
+                android:divider="@color/black"
+                android:dividerHeight="2dp"
+                android:listSelector="@color/white" />
 
             <TextView
                 android:id="@+id/infoTextView"
@@ -107,9 +115,6 @@
                 android:textSize="16sp"
                 app:autoSizeTextType="uniform" />
 
-<!--            <ListView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent" />-->
 
         </LinearLayout>
     </ScrollView>

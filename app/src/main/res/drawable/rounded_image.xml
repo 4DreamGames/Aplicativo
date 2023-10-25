@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#FFFFFF"/> <!-- Cor de fundo, pode ser transparente ou qualquer cor desejada -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:innerRadius="0dp"
+    android:shape="ring"
+    android:thicknessRatio="1.9"
+    android:useLevel="false" >
+    <solid android:color="@android:color/transparent" />
 
-    <corners android:radius="1000dp"/> <!-- Defina o raio de arredondamento -->
+    <stroke
+        android:width="10dp"
+        android:color="@android:color/white" />
 </shape>
+//https://stackoverflow.com/questions/22105775/imageview-in-circular-through-xml

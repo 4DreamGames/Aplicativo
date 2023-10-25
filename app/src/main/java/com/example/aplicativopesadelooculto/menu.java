@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -18,11 +20,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class menu extends AppCompatActivity {
 
     private ImageButton ImageButtonVideo1, ImageButtonVideo2;
-    private ScrollView scrollViewHistoria, scrollViewInstrucoes, scrollViewSobre;
     private TextView infoTextTitulo, infoText1, infoText2, infoText3 ;
     private BottomNavigationView bottomNavigationView;
-    ListView listViewDevs;
+    ListView listView;
     String txt;
+    String devsList[] = {"Carlos Eduardo","Leo Kenzo", "Davi Gonzaga", "Bruno Lima", "Pedro Guilherme","Jhonata Brito"};
+    int devsImagens [] = {R.drawable.carlos, R.drawable.davi,R.drawable.jhonata,R.drawable.pedro,R.drawable.bruno,R.drawable.leo };
 
     @Override
 
@@ -30,10 +33,7 @@ public class menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         ScrollView scrollViewMenu = findViewById(R.id.scrollViewMenu);
-        ImageButtonVideo1 = findViewById(R.id.imageVideo1);
-        ImageButtonVideo2 = findViewById(R.id.imageVideo2);
 
-        // Retrieve the message from the intent and display it
         Bundle extras = getIntent().getExtras();
         String msg = null;
         TextView saudacao = findViewById(R.id.infoTextViewTitulo);
@@ -42,6 +42,11 @@ public class menu extends AppCompatActivity {
             txt = String.format("Olá <%s>", msg);
             saudacao.setText(txt);
         }
+
+
+
+        ImageButtonVideo1 = findViewById(R.id.imageVideo1);
+        ImageButtonVideo2 = findViewById(R.id.imageVideo2);
         ImageButtonVideo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,33 +62,43 @@ public class menu extends AppCompatActivity {
             }
         });
 
+        CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), devsList, devsImagens);
+        listView = (ListView) findViewById(R.id.customListView);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i("activity_menu", "Item selecionado : : " + position);
+            }
+        });
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         infoTextTitulo = findViewById(R.id.infoTextViewTitulo);
         infoText1 = findViewById(R.id.infoTextView);
         infoText2 = findViewById(R.id.infoTextView2);
         infoText3 = findViewById(R.id.infoTextView3);
+        listView.setVisibility(View.GONE);
 
         // Set the OnItemSelectedListener for BottomNavigationView
         bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.inicioItem) {
                 //invisible apaga o conteudo da tela dele perante a tela que vc pedir para exibir
                 infoTextTitulo.setText(txt);
+                listView.setVisibility(View.GONE);
                 infoText1.setText(R.string.HomeIntroducao);
                 infoText2.setText(R.string.Home);
                 infoText1.setVisibility(View.VISIBLE);
                 infoText2.setVisibility(View.VISIBLE);
                 ImageButtonVideo1.setVisibility(View.VISIBLE);
                 ImageButtonVideo2.setVisibility(View.VISIBLE);
-
-
             } else if (item.getItemId() == R.id.devsItem) {
                 infoTextTitulo.setText(R.string.devTitulo);
-                infoText1.setText(R.string.desenvolvedores2);
+                infoText1.setVisibility(View.GONE);
                 infoText2.setVisibility(View.GONE);
                 infoText3.setVisibility(View.GONE);
                 ImageButtonVideo1.setVisibility(View.GONE);
                 ImageButtonVideo2.setVisibility(View.GONE);
-
+                //chamando o Adapter do listview
+                listView.setAdapter(customAdapter);
+                listView.setVisibility(View.VISIBLE);
             } else if (item.getItemId() == R.id.tremItem) {
                 infoTextTitulo.setText(R.string.HistoriaTitulo);
                 infoText2.setText(R.string.Historia);
@@ -92,6 +107,7 @@ public class menu extends AppCompatActivity {
                 infoText3.setVisibility(View.GONE);
                 infoText2.setVisibility(View.VISIBLE);
                 ImageButtonVideo1.setVisibility(View.VISIBLE);
+                listView.setVisibility(View.GONE);
             } else if (item.getItemId() == R.id.instrucoesItem) {
                 infoTextTitulo.setText(R.string.instrucoesGame);
                 infoText1.setText(R.string.Instrucoes);
@@ -100,6 +116,7 @@ public class menu extends AppCompatActivity {
                 ImageButtonVideo1.setVisibility(View.GONE);
                 ImageButtonVideo2.setVisibility(View.GONE);
                 infoText1.setVisibility(View.VISIBLE);
+                listView.setVisibility(View.GONE);
             } else if (item.getItemId() == R.id.sobreItem) {
                 infoTextTitulo.setText(R.string.sobre);
                 infoText1.setText(R.string.conteudosobre);
@@ -108,18 +125,10 @@ public class menu extends AppCompatActivity {
                 ImageButtonVideo2.setVisibility(View.GONE);
                 ImageButtonVideo1.setVisibility(View.GONE);
                 infoText1.setVisibility(View.VISIBLE);
+                listView.setVisibility(View.GONE);
             }
             return true;
         });
 
-//        listViewDevs = findViewById(R.id.listViewDevs);
-//        listViewDevs.setAdapter(adapter);
-//
-//        String[] itensDevs = new String[]{"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
-//        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-//                this, // Contexto
-//                android.R.layout.simple_list_item_1, // ID do layout do item da lista (layout padrão fornecido pelo Android)
-//                itensDevs // Dados
-//        );
     }
 }
