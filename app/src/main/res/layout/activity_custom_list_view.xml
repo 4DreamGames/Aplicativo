@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ActivityCustomListView">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageIcon"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_margin="120dp"
-        android:src="@drawable/circle"
-        android:background="@drawable/leo"
-        android:contentDescription="@string/DescricaoImagem" />
+        android:src="@drawable/leo"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/DescricaoImagem">
+    </de.hdodenhof.circleimageview.CircleImageView>
 
     <TextView
         android:id="@+id/textView"
