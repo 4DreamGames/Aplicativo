@@ -19,9 +19,10 @@
         making i
     </string>
 
-    <string name="HomeIntroducao">Esse é o nosso aplicativo, ele permitira que você jogador, possa entender um pouco da dinamica e contrução do nosso jogo.
+    <string name="HomeIntroducao">%1$s Esse é o nosso aplicativo, ele permitira que você jogador, possa entender um pouco da dinamica e contrução do nosso jogo.
         Segue abaixo os videos e uma pequena introdução sobre eles, para que possa entender o nosso incrivel jogo.
     </string>
+
 
     <string name="Historia">No ano de 2050 um laboratório científico estava tentando descobrir a cura para o câncer com células modificadas na cidade de
         Nova York. Infelizmente devido as pesquisas ilegais e experimentos feito pelos cientistas as células afetaram o sistema nervoso do

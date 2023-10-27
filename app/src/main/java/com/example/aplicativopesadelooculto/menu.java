@@ -28,9 +28,9 @@ public class menu extends AppCompatActivity {
     String devsListFuncao[] = {"Full Stack/Analista","Front-End/Mobile", "Modelador & Design",  "Back-End/Unity", "Back-End/Unity & Design", "Back-End/Unity & Design"};
     String devsListStatus[] = {"Líder", "Co-Líder", "Colaborador", "Colaborador", "Colaborador", "Colaborador"};
     String devsListGitHub [] = {"Link GitHub", "Link GitHub", "Link GitHub", "Link GitHub", "Link GitHub", "Link GitHub"};
-
+    String introducao = "";
     int devsImagens [] = {R.drawable.carlos,R.drawable.leo ,R.drawable.bruno,R.drawable.pedro,R.drawable.jhonata, R.drawable.davi};
-
+    CustomAdapter customAdapter;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,19 +38,20 @@ public class menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         ScrollView scrollViewMenu = findViewById(R.id.scrollViewMenu);
 
+        String saudacaoText;
         Bundle extras = getIntent().getExtras();
-        String msg = null;
-        TextView saudacao = findViewById(R.id.infoTextViewTitulo);
         if (extras != null && extras.containsKey(MainActivity.EXTRA_MESSAGE)) {
-            msg = extras.getString(MainActivity.EXTRA_MESSAGE);
-            txt = String.format("Olá <%s>", msg);
-            saudacao.setText(txt);
+            String msg = extras.getString(MainActivity.EXTRA_MESSAGE);
+            saudacaoText = String.format("Olá <%s>,", msg);
+        } else {
+            saudacaoText = getResources().getString(R.string.saudacao);
         }
 
-
+         introducao = getResources().getString(R.string.HomeIntroducao, saudacaoText);
 
         ImageButtonVideo1 = findViewById(R.id.imageVideo1);
         ImageButtonVideo2 = findViewById(R.id.imageVideo2);
+
         ImageButtonVideo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,7 +67,7 @@ public class menu extends AppCompatActivity {
             }
         });
 
-        CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(),devsList,devsListGitHub, devsListFuncao, devsListStatus, devsImagens);
+         customAdapter = new CustomAdapter(getApplicationContext(),devsList,devsListGitHub, devsListFuncao, devsListStatus, devsImagens);
         listView = (ListView) findViewById(R.id.customListView);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -122,56 +123,82 @@ public class menu extends AppCompatActivity {
 
         // Set the OnItemSelectedListener for BottomNavigationView
         bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.inicioItem) {
-                //invisible apaga o conteudo da tela dele perante a tela que vc pedir para exibir
-                infoTextTitulo.setText(txt);
-                listView.setVisibility(View.GONE);
-                infoText1.setText(R.string.HomeIntroducao);
-                infoText2.setText(R.string.Home);
-                infoText1.setVisibility(View.VISIBLE);
-                infoText2.setVisibility(View.VISIBLE);
-                ImageButtonVideo1.setVisibility(View.VISIBLE);
-                ImageButtonVideo2.setVisibility(View.VISIBLE);
-            } else if (item.getItemId() == R.id.devsItem) {
-                infoTextTitulo.setText(R.string.devTitulo);
-                infoText1.setVisibility(View.GONE);
-                infoText2.setVisibility(View.GONE);
-                infoText3.setVisibility(View.GONE);
-                ImageButtonVideo1.setVisibility(View.GONE);
-                ImageButtonVideo2.setVisibility(View.GONE);
-                //chamando o Adapter do listview
-                listView.setAdapter(customAdapter);
-                listView.setVisibility(View.VISIBLE);
-            } else if (item.getItemId() == R.id.tremItem) {
-                infoTextTitulo.setText(R.string.HistoriaTitulo);
-                infoText2.setText(R.string.Historia);
-                ImageButtonVideo2.setVisibility(View.GONE);
-                infoText1.setVisibility(View.GONE);
-                infoText3.setVisibility(View.GONE);
-                infoText2.setVisibility(View.VISIBLE);
-                ImageButtonVideo1.setVisibility(View.VISIBLE);
-                listView.setVisibility(View.GONE);
-            } else if (item.getItemId() == R.id.instrucoesItem) {
-                infoTextTitulo.setText(R.string.instrucoesGame);
-                infoText1.setText(R.string.Instrucoes);
-                infoText2.setVisibility(View.GONE);
-                infoText3.setVisibility(View.GONE);
-                ImageButtonVideo1.setVisibility(View.GONE);
-                ImageButtonVideo2.setVisibility(View.GONE);
-                infoText1.setVisibility(View.VISIBLE);
-                listView.setVisibility(View.GONE);
-            } else if (item.getItemId() == R.id.sobreItem) {
-                infoTextTitulo.setText(R.string.sobre);
-                infoText1.setText(R.string.conteudosobre);
-                infoText2.setVisibility(View.GONE);
-                infoText3.setVisibility(View.GONE);
-                ImageButtonVideo2.setVisibility(View.GONE);
-                ImageButtonVideo1.setVisibility(View.GONE);
-                infoText1.setVisibility(View.VISIBLE);
-                listView.setVisibility(View.GONE);
-            }
+            verificaClique(item.getItemId());
             return true;
         });
+        defineInicio();
+    }
 
+    private void verificaClique(int i) {
+        if (i == R.id.inicioItem) {
+            //invisible apaga o conteudo da tela dele perante a tela que vc pedir para exibir
+            defineInicio();
+        } else if (i == R.id.devsItem) {
+            defineDevs();
+        } else if (i== R.id.tremItem) {
+            defineItem();
+        } else if (i == R.id.instrucoesItem) {
+            defineInstrucoes();
+        } else if (i == R.id.sobreItem) {
+            defineSobre();
+        }
+    }
+
+    private void defineSobre() {
+        infoTextTitulo.setText(R.string.sobre);
+        infoText1.setText(R.string.conteudosobre);
+        infoText2.setVisibility(View.GONE);
+        infoText3.setVisibility(View.GONE);
+        ImageButtonVideo2.setVisibility(View.GONE);
+        ImageButtonVideo1.setVisibility(View.GONE);
+        infoText1.setVisibility(View.VISIBLE);
+        listView.setVisibility(View.GONE);
+    }
+
+    private void defineInstrucoes() {
+        infoTextTitulo.setText(R.string.instrucoesGame);
+        infoText1.setText(R.string.Instrucoes);
+        infoText2.setVisibility(View.GONE);
+        infoText3.setVisibility(View.GONE);
+        ImageButtonVideo1.setVisibility(View.GONE);
+        ImageButtonVideo2.setVisibility(View.GONE);
+        infoText1.setVisibility(View.VISIBLE);
+        listView.setVisibility(View.GONE);
+    }
+
+    private void defineItem() {
+        infoTextTitulo.setText(R.string.HistoriaTitulo);
+        infoText2.setText(R.string.Historia);
+        ImageButtonVideo2.setVisibility(View.GONE);
+        infoText1.setVisibility(View.GONE);
+        infoText3.setVisibility(View.GONE);
+        infoText2.setVisibility(View.VISIBLE);
+        ImageButtonVideo1.setVisibility(View.VISIBLE);
+        listView.setVisibility(View.GONE);
+    }
+
+    private void defineDevs() {
+        infoTextTitulo.setText(R.string.devTitulo);
+        infoText1.setVisibility(View.GONE);
+        infoText2.setVisibility(View.GONE);
+        infoText3.setVisibility(View.GONE);
+        ImageButtonVideo1.setVisibility(View.GONE);
+        ImageButtonVideo2.setVisibility(View.GONE);
+        //chamando o Adapter do listview
+        listView.setAdapter(customAdapter);
+        listView.setVisibility(View.VISIBLE);
+    }
+
+    private void defineInicio() {
+        infoTextTitulo.setText(R.string.titulo);
+        listView.setVisibility(View.GONE);
+        infoText1.setVisibility(View.GONE);
+        infoText1.setText(introducao);
+        infoText1.setVisibility(View.VISIBLE);
+        infoText1.invalidate();
+        infoText2.setText(R.string.Home);
+        infoText2.setVisibility(View.VISIBLE);
+        ImageButtonVideo1.setVisibility(View.VISIBLE);
+        ImageButtonVideo2.setVisibility(View.VISIBLE);
     }
 }
