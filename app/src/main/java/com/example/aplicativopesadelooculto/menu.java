@@ -24,8 +24,12 @@ public class menu extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     ListView listView;
     String txt;
-    String devsList[] = {"Carlos Eduardo","Leo Kenzo", "Davi Gonzaga", "Bruno Lima", "Pedro Guilherme","Jhonata Brito"};
-    int devsImagens [] = {R.drawable.carlos, R.drawable.davi,R.drawable.jhonata,R.drawable.pedro,R.drawable.bruno,R.drawable.leo };
+    String devsList[] = {"Carlos Eduardo","Leo Kenzo", "Bruno Lima", "Pedro Guilherme","Jhonata Brito", "Davi Gonzaga"};
+    String devsListFuncao[] = {"Full Stack/Analista","Front-End/Mobile", "Modelador & Design",  "Back-End/Unity", "Back-End/Unity & Design", "Back-End/Unity & Design"};
+    String devsListStatus[] = {"Líder", "Co-Líder", "Colaborador", "Colaborador", "Colaborador", "Colaborador"};
+    String devsListGitHub [] = {"Link GitHub", "Link GitHub", "Link GitHub", "Link GitHub", "Link GitHub", "Link GitHub"};
+
+    int devsImagens [] = {R.drawable.carlos,R.drawable.leo ,R.drawable.bruno,R.drawable.pedro,R.drawable.jhonata, R.drawable.davi};
 
     @Override
 
@@ -62,14 +66,53 @@ public class menu extends AppCompatActivity {
             }
         });
 
-        CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), devsList, devsImagens);
+        CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(),devsList,devsListGitHub, devsListFuncao, devsListStatus, devsImagens);
         listView = (ListView) findViewById(R.id.customListView);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.i("activity_menu", "Item selecionado : : " + position);
+                Intent intent;
+
+                // Verificar qual item foi clicado baseado na posição
+                switch (position) {
+                    case 0: // Ação para o primeiro item
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/MartinsCarlos111"));
+                        startActivity(intent);
+                        break;
+
+                    case 1: // Ação para o segundo item
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/LeoMasago"));
+                        startActivity(intent);
+                        break;
+
+                    case 2: // Ação para o terceiro item
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Nikito-13"));
+                        startActivity(intent);
+                        break;
+                    case 3: // Ação para o terceiro item
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/pedroribeiro07"));
+                        startActivity(intent);
+                        break;
+
+                    case 4: // Ação para o terceiro item
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Jhonata-souza"));
+                        startActivity(intent);
+                        break;
+                    case 5: // Ação para o terceiro item
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Davignz"));
+                        startActivity(intent);
+                        break;
+                    // Adicione mais cases conforme a quantidade de itens no seu ListView
+
+                    default:
+                        Log.i("activity_menu", "Item não reconhecido: " + position);
+                        break;
+                }
+
+                Log.i("activity_menu", "Item selecionado: " + position);
             }
         });
+
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         infoTextTitulo = findViewById(R.id.infoTextViewTitulo);
         infoText1 = findViewById(R.id.infoTextView);
