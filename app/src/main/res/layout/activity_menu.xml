@@ -35,7 +35,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
 
             <TextView
@@ -65,44 +66,45 @@
             <TextView
                 android:id="@+id/infoTextView"
                 android:layout_width="wrap_content"
-                android:layout_height="240dp"
-                android:layout_margin="10dp"
+                android:layout_height="149dp"
+                android:layout_margin="15dp"
                 android:fontFamily="@font/im_fell_french_canon_sc"
                 android:justificationMode="inter_word"
                 android:minHeight="0dp"
                 android:padding="10dp"
                 android:text="@string/HomeIntroducao"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 tools:ignore="TextSizeCheck" />
 
             <ImageButton
                 android:id="@+id/imageVideo1"
                 android:layout_width="wrap_content"
                 android:layout_height="246dp"
-                android:layout_margin="15dp"
+                android:layout_margin="25dp"
+                android:layout_marginLeft="35dp"
                 android:contentDescription="@string/DescricaoImagem"
-                android:src="@drawable/image"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:src="@drawable/image" />
 
             <TextView
                 android:id="@+id/infoTextView2"
                 android:layout_width="wrap_content"
-                android:layout_height="377dp"
-                android:layout_margin="5dp"
+                android:layout_height="345dp"
+                android:layout_margin="15dp"
                 android:fontFamily="@font/im_fell_french_canon_sc"
                 android:justificationMode="inter_word"
                 android:padding="10dp"
                 android:text="@string/Home"
                 android:textColor="@color/white"
-                android:textSize="10sp"
+                android:textSize="18sp"
                 app:autoSizeTextType="uniform" />
 
             <ImageButton
                 android:id="@+id/imageVideo2"
                 android:layout_width="wrap_content"
                 android:layout_height="246dp"
-                android:layout_margin="15dp"
+                android:layout_margin="25dp"
+                android:layout_marginLeft="35dp"
                 android:contentDescription="@string/DescricaoImagem"
                 android:src="@drawable/image" />
 
@@ -110,14 +112,14 @@
                 android:id="@+id/infoTextView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="10dp"
+                android:layout_margin="15dp"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/im_fell_french_canon_sc"
                 android:justificationMode="inter_word"
+                android:padding="10dp"
                 android:text="@string/Home"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 app:autoSizeTextType="uniform" />
 
 
