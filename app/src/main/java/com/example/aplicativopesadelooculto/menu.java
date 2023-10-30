@@ -131,7 +131,6 @@ public class menu extends AppCompatActivity {
 
     private void verificaClique(int i) {
         if (i == R.id.inicioItem) {
-            //invisible apaga o conteudo da tela dele perante a tela que vc pedir para exibir
             defineInicio();
         } else if (i == R.id.devsItem) {
             defineDevs();
