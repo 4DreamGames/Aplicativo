@@ -156,11 +156,13 @@ public class menu extends AppCompatActivity {
 
     private void defineInstrucoes() {
         infoTextTitulo.setText(R.string.instrucoesGame);
-        infoText1.setText(R.string.Instrucoes);
-        infoText2.setVisibility(View.GONE);
-        infoText3.setVisibility(View.GONE);
-        ImageButtonVideo1.setVisibility(View.GONE);
-        ImageButtonVideo2.setVisibility(View.GONE);
+        infoText3.setText(R.string.InstrucoesContinuacao);
+        infoText2.setText(R.string.Instrucoes);
+        infoText1.setText(R.string.IntroducaoInstrucoes);
+        ImageButtonVideo1.setVisibility(View.VISIBLE);
+        ImageButtonVideo2.setVisibility(View.VISIBLE);
+        infoText3.setVisibility(View.VISIBLE);
+        infoText2.setVisibility(View.VISIBLE);
         infoText1.setVisibility(View.VISIBLE);
         listView.setVisibility(View.GONE);
     }

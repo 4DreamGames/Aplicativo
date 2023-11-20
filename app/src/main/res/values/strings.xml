@@ -32,10 +32,41 @@
         da Finlândia para pegar um trem que os levaria até a cidade. Porém não é só eles que querem chegar lá. O trem está carregado de infectados.
     </string>
 
-    <string name="Instrucoes">O jogador estará na visão do eletricista e iniciara dentro de um vagão de um trem e terá como objetivo chegar até a cabine de controle para guiar o trem até uma estação. Ele terá certos obstáculos que vão ser “Nome dos obstáculos” e para passar ele não poderá ser visto, caso seja visto, ele terá que enfrentar os monstros. Para ajudar o jogador itens vão aparecer em meio a sua jogatina para o ajudá-lo.
-        O eletricista carrega uma mochila com uma bateria e um fio ligado à sua mão, que ele usa como arma para eletrocutar os infectados.
-        O trem está cheio de infectados, e o protagonista deve evitá-los ou enfrentá-los.
+    <string name="IntroducaoInstrucoes">Para iniciar o jogo, o jogador deverá explorar um ambiente nevado, repleto de majestosas montanhas,
+        antes de se dirigir até o vagão e abrir a porta para dar início ao "Pesadelo".
     </string>
+
+    <string name="Instrucoes">
+            <b>Esc</b> - Abrir/Fechar Menu (pausar o jogo)\n
+            <b>W</b> - Mover para frente\n
+            <b>A</b> - Mover para esquerda\n
+            <b>S</b> - Mover para trás\n
+            <b>D</b> - Mover para direita\n
+            <b>Espaço</b> - Pular\n
+            <b>E</b> - Abrir portas e interagir com itens/Ativar esconderijo\n
+            <b>Botão esquerdo do mouse</b> - Atirar\n
+            <b>Ctrl</b> - Agachar\n
+            <b>Shift</b> - Correr\n
+            <b>H</b> - Esconder arma\n
+            <b>Scroll do mouse</b> - Trocar arma/item
+    </string>
+
+    <string name="InstrucoesContinuacao">
+            <b>Esconderijos </b>\nAo chegar perto de um esconderijo será ativado um
+        símbolo de interação, ao se aproximar a opção de se esconder irá aparecer.
+        Assim que o personagem entra no esconderijo passar ser invisível para o
+        infectado. \n \n
+        <b>Infectados</b>\nPodem ver e ouvir, em uma determinada área,
+        pode atacar o jogador e ser atacado pela ferramenta do personagem. \n \n
+
+        <b>Personagem</b>\nAo ser atacado o personagem verá uma tela com sangue e perdera vida,
+        caso seja atacado novamente vai perder a velocidade de movimentação além
+        da vida, com isso não poderá correr, e vai apenas andar devagar, até que
+        seja derrotado por completo. \n \n
+        <b>Ferramenta </b>\nA ferramenta tem a capacidade de neutralizar os infectados por um curto
+        período, podendo dar uma brecha de tempo para que o personagem possa fugir.
+
+</string>
 
     <string name="conteudosobre">Classificação indicativa não recomendada para menores de 12 anos, de acordo com os seguintes critérios:
         A.3.3. Ato Violento
