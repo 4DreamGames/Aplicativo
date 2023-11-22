@@ -166,6 +166,7 @@ public class menu extends AppCompatActivity {
         infoText2.setText(R.string.Instrucoes);
         infoText1.setText(R.string.IntroducaoInstrucoes);
         ImageView1.setImageResource(R.drawable.instrucoes);
+        ImageView2.setImageResource(R.drawable.esconderijo);
         ImageView1.setVisibility(View.VISIBLE);
         ImageView2.setVisibility(View.VISIBLE);
         infoText3.setVisibility(View.VISIBLE);
