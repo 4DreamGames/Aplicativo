@@ -165,26 +165,29 @@ public class menu extends AppCompatActivity {
         infoText3.setText(R.string.InstrucoesContinuacao);
         infoText2.setText(R.string.Instrucoes);
         infoText1.setText(R.string.IntroducaoInstrucoes);
-        ImageButtonVideo1.setVisibility(View.VISIBLE);
-        ImageButtonVideo2.setVisibility(View.VISIBLE);
+        ImageView1.setImageResource(R.drawable.instrucoes);
+        ImageView1.setVisibility(View.VISIBLE);
+        ImageView2.setVisibility(View.VISIBLE);
         infoText3.setVisibility(View.VISIBLE);
         infoText2.setVisibility(View.VISIBLE);
         infoText1.setVisibility(View.VISIBLE);
         listView.setVisibility(View.GONE);
-        ImageView1.setVisibility(View.GONE);
-        ImageView2.setVisibility(View.GONE);
+        ImageButtonVideo1.setVisibility(View.GONE);
+        ImageButtonVideo2.setVisibility(View.GONE);
     }
 
     private void defineItem() {
         infoTextTitulo.setText(R.string.HistoriaTitulo);
         infoText3.setText(R.string.Historia);
+        ImageView1.setImageResource(R.drawable.imagemtrem);
+        infoText3.setVisibility(View.VISIBLE);
+        ImageView1.setVisibility(View.VISIBLE);
+        listView.setVisibility(View.GONE);
         ImageButtonVideo2.setVisibility(View.GONE);
-        ImageButtonVideo1.setVisibility(View.VISIBLE);
+        ImageButtonVideo1.setVisibility(View.GONE);
+        ImageView2.setVisibility(View.GONE);
         infoText1.setVisibility(View.GONE);
         infoText2.setVisibility(View.GONE);
-        infoText3.setVisibility(View.VISIBLE);
-        ImageButtonVideo1.setImageResource(R.drawable.agacharprint);
-        listView.setVisibility(View.GONE);
     }
 
     private void defineDevs() {
