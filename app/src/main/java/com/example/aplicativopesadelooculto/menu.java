@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class menu extends AppCompatActivity {
 
+    private ImageView ImageView1, ImageView2;
     private ImageButton ImageButtonVideo1, ImageButtonVideo2;
     private TextView infoTextTitulo, infoText1, infoText2, infoText3 ;
     private BottomNavigationView bottomNavigationView;
@@ -51,18 +53,20 @@ public class menu extends AppCompatActivity {
 
         ImageButtonVideo1 = findViewById(R.id.imageVideo1);
         ImageButtonVideo2 = findViewById(R.id.imageVideo2);
+        ImageView1 = findViewById(R.id.imageView1);
+        ImageView2 = findViewById(R.id.imageView2);
 
         ImageButtonVideo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ImageButtonVideo1 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/"));
+                Intent ImageButtonVideo1 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/GfCenrDfe-I"));
                 startActivity(ImageButtonVideo1);
             }
         });
         ImageButtonVideo2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ImageButtonVideo2 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/"));
+                Intent ImageButtonVideo2 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/NruFnaBRRuk"));
                 startActivity(ImageButtonVideo2);
             }
         });
@@ -152,6 +156,8 @@ public class menu extends AppCompatActivity {
         ImageButtonVideo1.setVisibility(View.GONE);
         infoText1.setVisibility(View.VISIBLE);
         listView.setVisibility(View.GONE);
+        ImageView1.setVisibility(View.GONE);
+        ImageView2.setVisibility(View.GONE);
     }
 
     private void defineInstrucoes() {
@@ -165,16 +171,19 @@ public class menu extends AppCompatActivity {
         infoText2.setVisibility(View.VISIBLE);
         infoText1.setVisibility(View.VISIBLE);
         listView.setVisibility(View.GONE);
+        ImageView1.setVisibility(View.GONE);
+        ImageView2.setVisibility(View.GONE);
     }
 
     private void defineItem() {
         infoTextTitulo.setText(R.string.HistoriaTitulo);
-        infoText2.setText(R.string.Historia);
+        infoText3.setText(R.string.Historia);
         ImageButtonVideo2.setVisibility(View.GONE);
-        infoText1.setVisibility(View.GONE);
-        infoText3.setVisibility(View.GONE);
-        infoText2.setVisibility(View.VISIBLE);
         ImageButtonVideo1.setVisibility(View.VISIBLE);
+        infoText1.setVisibility(View.GONE);
+        infoText2.setVisibility(View.GONE);
+        infoText3.setVisibility(View.VISIBLE);
+        ImageButtonVideo1.setImageResource(R.drawable.agacharprint);
         listView.setVisibility(View.GONE);
     }
 
@@ -188,18 +197,25 @@ public class menu extends AppCompatActivity {
         //chamando o Adapter do listview
         listView.setAdapter(customAdapter);
         listView.setVisibility(View.VISIBLE);
+        ImageView1.setVisibility(View.GONE);
+        ImageView2.setVisibility(View.GONE);
     }
 
     private void defineInicio() {
         infoTextTitulo.setText(R.string.titulo);
-        listView.setVisibility(View.GONE);
-        infoText1.setVisibility(View.GONE);
         infoText1.setText(introducao);
+        infoText2.setText(R.string.home1);
+        infoText3.setText(R.string.home2);
+        ImageButtonVideo2.setImageResource(R.drawable.imagemvida);
+        ImageButtonVideo1.setImageResource(R.drawable.agacharprint);
+        listView.setVisibility(View.GONE);
+        //infoText1.invalidate();
         infoText1.setVisibility(View.VISIBLE);
-        infoText1.invalidate();
-        infoText2.setText(R.string.Home);
         infoText2.setVisibility(View.VISIBLE);
+        infoText3.setVisibility(View.VISIBLE);
         ImageButtonVideo1.setVisibility(View.VISIBLE);
         ImageButtonVideo2.setVisibility(View.VISIBLE);
+        ImageView1.setVisibility(View.GONE);
+        ImageView2.setVisibility(View.GONE);
     }
 }

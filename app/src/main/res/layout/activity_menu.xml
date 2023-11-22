@@ -34,7 +34,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
@@ -61,7 +61,8 @@
                 android:dividerHeight="2dp"
                 android:listSelector="@color/white"
                 android:padding="10dp"
-                android:paddingLeft="15dp" />
+                android:paddingLeft="15dp"
+                tools:ignore="NestedScrolling" />
 
             <TextView
                 android:id="@+id/infoTextView"
@@ -84,19 +85,28 @@
                 android:layout_margin="25dp"
                 android:layout_marginLeft="35dp"
                 android:contentDescription="@string/DescricaoImagem"
-                android:src="@drawable/image" />
+                />
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="246dp"
+                android:layout_margin="25dp"
+                android:layout_marginLeft="35dp"
+                android:contentDescription="@string/DescricaoImagem"
+                />
 
             <TextView
                 android:id="@+id/infoTextView2"
                 android:layout_width="wrap_content"
-                android:layout_height="345dp"
+                android:layout_height="270dp"
+                android:layout_marginTop="0dp"
                 android:layout_margin="15dp"
                 android:fontFamily="@font/im_fell_french_canon_sc"
                 android:justificationMode="inter_word"
-                android:padding="10dp"
-                android:text="@string/Home"
+                android:padding="18dp"
+                android:text="@string/home1"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="10sp"
                 app:autoSizeTextType="uniform" />
 
             <ImageButton
@@ -106,7 +116,15 @@
                 android:layout_margin="25dp"
                 android:layout_marginLeft="35dp"
                 android:contentDescription="@string/DescricaoImagem"
-                android:src="@drawable/image" />
+                 />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="246dp"
+                android:layout_margin="25dp"
+                android:layout_marginLeft="35dp"
+                android:contentDescription="@string/DescricaoImagem"
+                />
 
             <TextView
                 android:id="@+id/infoTextView3"
@@ -117,7 +135,7 @@
                 android:fontFamily="@font/im_fell_french_canon_sc"
                 android:justificationMode="inter_word"
                 android:padding="10dp"
-                android:text="@string/Home"
+                android:text="@string/home2"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:autoSizeTextType="uniform" />
