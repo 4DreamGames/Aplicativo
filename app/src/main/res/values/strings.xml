@@ -60,11 +60,42 @@
 
 </string>
 
-    <string name="conteudosobre">Classificação indicativa não recomendada para menores de 12 anos, de acordo com os seguintes critérios:
-        A.3.3. Ato Violento
-        - Representações de ameaça ou ação intencional de violência, que atente contra a integridade corporal, liberdade ou à saúde, própria ou de outrem. Incluem-se nesta tendência as retratações de tráfico de pessoas.
-        A.3.7. Exposição ao perigo
-	    - Representação de ato volitivo ou omissivo que coloque em risco a vida ou a saúde de si mesmo ou de outrem. O ato depende da consciência sobre a omissão ou o risco da ação realizada. O perigo deve ser palpável e previsível.
+    <string name="IntroducaoSobre">
+        A 4DreamGames emerge como uma desenvolvedora de jogos stealth,
+        buscando encantar jogadores com experiências envolventes e gratuitas.
+        Inspirados pela SEGA Corporation, focamos em preencher o mercado com narrativas furtivas.
+    </string>
+
+    <string name="cttSobre">
+        Nosso objetivo é publicar nas principais plataformas de jogos, criar jogos do gênero stealth sendo eles totalmente gratuitos.
+        Nossa concorrente é a SEGA Corporation que tem seu principal jogo do estilo stealth “Alien:isolation” que é um dos mais
+        jogados na atualidade do gênero.
+        Quando pensamos na nossa empresa e nos nossos projetos, paramos para analisar o
+        que estava em falta no mercado e nos deparamos com os jogos do estilo stealth que
+        são jogos focados em furtividade. Logo começamos a produzir e construir nossa
+        empresa focada totalmente em games stealth. Todos os membros da equipe jogam
+        algum tipo de jogo e mediante pesquisas, relataram que se sentem dentro dos jogos
+        e sonham com eles quando estão concentrados e focados jogando algo.
+        Com isso decidimos dar o nome da empresa de “4DreamGames” que passa o
+        sentimento de que os projetos dessa empresa serão os jogos dos seus sonhos.\n \n
+        <b>Classificação indicativa</b>\n \n
+        Não recomendada para menores de 12 anos, de acordo com os seguintes critérios:\n
+        <b>A.3.3. Ato Violento</b> - Representações de ameaça ou ação intencional de violência, que atente contra a
+        integridade corporal, liberdade ou à saúde, própria ou de outrem.
+        Incluem-se nesta tendência as retratações de tráfico de pessoas. \n
+        <b>A.3.7. Exposição ao perigo</b>
+	    - Representação de ato volitivo ou omissivo que coloque em risco a vida ou a saúde de si
+        mesmo ou de outrem. O ato depende da consciência sobre a omissão ou o risco da ação realizada.
+        O perigo deve ser palpável e previsível. \n \n
+        Na "For Dream Games", estamos comprometidos em oferecer jogos que transcendam as
+        expectativas, proporcionando aos jogadores experiências memoráveis e imersivas.
+        Estamos abertos ao contato e ansiosos para compartilhar nossas criações inovadoras.
+        Junte-se a nós nessa jornada emocionante pelos sonhos transformados em realidade. \n \n
+        <b>Contato</b> \n \n
+        <b>Email:</b> 4dreamgames2023@gmail.com \n
+        <b>Telefone:</b> (11) 3662-1453 \n
+        <b>Local da nossa empresa:</b> R. Guaipá, 678 - Vila Leopoldina, São Paulo - SP, 05089-000 \n
+        <b>Instagram:</b> 4dream_games
     </string>
 
     <string name="home1">Enquanto a barra de bateria estiver cheia é possível apertar o botão esquerdo do
