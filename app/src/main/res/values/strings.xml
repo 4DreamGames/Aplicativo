@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AplicativoPesadeloOculto</string>
+    <string name="app_name">PesadeloOculto</string>
     <string name="titulo">Home</string>
     <string name="saudacao">...</string>
     <string name="devTitulo">Desenvolvedores</string>
@@ -108,4 +108,5 @@
         caso seja avistado procure por lugares onde pode se esconder (ex: armários, camas, mesas) e pressione "E" para se esconder,
         assim despistando os infectados.
     </string>
+    <string name="todo">TODO</string>
 </resources>
