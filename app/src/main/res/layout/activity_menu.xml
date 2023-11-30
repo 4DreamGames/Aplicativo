@@ -73,6 +73,7 @@
                 android:justificationMode="inter_word"
                 android:minHeight="0dp"
                 android:padding="10dp"
+                android:paddingBottom="0dp"
                 android:text="@string/HomeIntroducao"
                 android:textColor="@color/white"
                 android:textSize="18sp"

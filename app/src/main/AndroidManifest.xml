@@ -6,11 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logoo"
+        android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logoo"
+        android:roundIcon="@drawable/logoicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicativoPesadeloOculto"
         tools:targetApi="31">
@@ -20,26 +18,9 @@
         <activity
             android:name=".ActivityCustomListView"
             android:exported="false" />
-        <activity
-            android:name=".activity_custom_list_view"
-            android:exported="false" />
-        <activity
-            android:name=".sobre"
-            android:exported="false" />
-        <activity
-            android:name=".instrucoes"
-            android:exported="false" />
-        <activity
-            android:name=".historia"
-            android:exported="false" />
-        <activity
-            android:name=".devs"
-            android:exported="false" />
+
         <activity
             android:name=".menu"
-            android:exported="false" />
-        <activity
-            android:name=".men8"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
